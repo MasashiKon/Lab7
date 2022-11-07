@@ -61,9 +61,9 @@ public class HomeController implements Initializable{
         this.clearFields(null);
     }
 
-    //delete employee
-
     //update employee
+    
+    //delete employee
 
     //clear fields
     @FXML

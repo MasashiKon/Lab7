@@ -14,16 +14,24 @@
          <children>
             <TextField fx:id="username" layoutX="100.0" layoutY="60.0" prefHeight="40.0" prefWidth="290.0" />
             <PasswordField fx:id="password" layoutX="102.0" layoutY="119.0" prefHeight="40.0" prefWidth="290.0" />
-            <Button fx:id="loginBtn" layoutX="103.0" layoutY="206.0" mnemonicParsing="false" onAction="#Login" prefHeight="40.0" prefWidth="290.0" text="SIGN IN" />
+            <Button fx:id="loginBtn" layoutX="103.0" layoutY="185.0" mnemonicParsing="false" onAction="#Login" prefHeight="40.0" prefWidth="290.0" text="SIGN IN" />
             <Label layoutX="219.0" layoutY="15.0" text="Login" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="20.0" />
                </font>
             </Label>
+            <Label fx:id="loginStatus" layoutX="112.0" layoutY="239.0" prefHeight="16.0" prefWidth="268.0" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="13.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
-      <Label layoutX="16.0" layoutY="16.0" text="DB Status:" />
-      <Label fx:id="dbStatus" layoutX="76.0" layoutY="16.0" />
-      <Label fx:id="loginStatus" layoutX="35.0" layoutY="239.0" prefHeight="17.0" prefWidth="290.0" />
+      <Label layoutX="10.0" layoutY="13.0" text="DB Status:" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="dbStatus" layoutX="82.0" layoutY="14.0" textFill="WHITE" />
    </children>
 </AnchorPane>
