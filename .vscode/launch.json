@@ -15,8 +15,8 @@
             "name": "Launch App",
             "request": "launch",
             "mainClass": "App",
-            "projectName": "JavaFxDB_5732927",
-            "vmArgs": "--module-path /Users/francoispolo/Desktop/Lab/JavaPrerequisites/JavaFX-ARM/javafx-sdk-19.2/lib --add-modules javafx.controls,javafx.fxml "
+            "projectName": "JAVA-600_efc42516",
+            "vmArgs": "--module-path /Users/masashi/Codes/DLApps/javafx-sdk-19/lib --add-modules javafx.controls,javafx.fxml "
         }
     ]
 }

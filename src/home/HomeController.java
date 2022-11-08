@@ -31,6 +31,10 @@ public class HomeController implements Initializable{
     @FXML
     private Button addEntryBtn;
     @FXML
+    private Button updateEmployeeBtn;
+    @FXML
+    private Button deleteEmployeeBtn;
+    @FXML
     private Button clearBtn;
 
     //instantiate a model
@@ -62,8 +66,22 @@ public class HomeController implements Initializable{
     }
 
     //update employee
+    @FXML
+    private void updateEmployee(ActionEvent event){
+        EmployeeData employee = employeeDataTableView.getSelectionModel().getSelectedItem();;
+        homeModel.updateEmployee(this.name.getText() != "" ? this.name.getText() : employee.nameProperty().get() , this.department.getText() != "" ? this.department.getText() : employee.departmentProperty().get(), employee.idProperty().getValue());
+        this.loadEmployeeData();
+        this.clearFields(null);
+    }
     
     //delete employee
+    @FXML
+    private void deleteEmployee(ActionEvent event){
+        EmployeeData employee = employeeDataTableView.getSelectionModel().getSelectedItem();;
+        homeModel.deleteEmployee(employee.idProperty().getValue());
+        this.loadEmployeeData();
+        this.clearFields(null);
+    }
 
     //clear fields
     @FXML

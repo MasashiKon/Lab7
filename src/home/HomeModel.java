@@ -60,7 +60,53 @@ public class HomeModel {
             statement.setString(1, name);
             statement.setString(2, department);
 
-            statement.executeQuery();
+            statement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                statement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void updateEmployee(String name, String department, String id){
+        String query = "UPDATE employees_tbl SET name = ?, department = ? WHERE id = ?;";
+        PreparedStatement statement = null;
+
+        try {
+            statement = conn.prepareStatement(query);
+
+            statement.setString(1, name);
+            statement.setString(2, department);
+            statement.setInt(3, Integer.parseInt(id));
+
+            statement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                statement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void deleteEmployee(String id){
+        String query = "DELETE FROM employees_tbl WHERE id = ?;";
+        PreparedStatement statement = null;
+
+        try {
+            statement = conn.prepareStatement(query);
+
+            statement.setInt(1, Integer.parseInt(id));
+
+            statement.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();
